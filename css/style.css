@@ -152,7 +152,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Times, Georgia, serif, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  font-family: font-serif, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei";
 }
 h1,
 h2,
@@ -161,7 +161,7 @@ h3 {
 }
 h1 {
   font-size: 1.5em;
-  font-family: "Segoe UI", "Lucida Grande", Verdana, "Helvetica Neue", Arial, sans-serif, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "Segoe UI", "Lucida Grande", Verdana, "Helvetica Neue", Arial, sans-serif, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei";
 }
 h2 {
   font-size: 1.3em;
