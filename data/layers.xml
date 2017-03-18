@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LayerDefines>
+  <LayerCatalog title="国土地理院">
+  	<LayerDefine id="1">
+	    <caption>標準地図</caption>
+	    <name>標準地図</name>
+	    <description>国土地理院　標準地図</description>
+	    <legend>http://maps.gsi.go.jp/development/ichiran.html#std</legend>
+	    <url_templet>http://{s}.gsi.go.jp/xyz/std/{z}/{x}/{y}.png</url_templet>
+	    <url_templet_subdomains>cyberjapandata-t1, cyberjapandata-t2,cyberjapandata-t3</url_templet_subdomains>
+	    <min_level>2</min_level>
+	    <max_level>16</max_level>
+	    <projectType>EPSG_3857</projectType>
+	    <mapbounds>
+	      <left>-2.0037508342789244E7</left>
+	      <top>2.0037508342789244E7</top>
+	      <right>2.0037508342789244E7</right>
+	      <bottom>-2.0037508342789244E7</bottom>
+	    </mapbounds>
+	  </LayerDefine>
+	  <LayerDefine id="2">
+	    <caption>淡色地図</caption>
+	    <name>淡色地図</name>
+	    <description>国土地理院　淡色地図</description>
+	    <legend>http://maps.gsi.go.jp/development/ichiran.html#pale</legend>
+	    <url_templet>http://{s}.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png</url_templet>
+	    <url_templet_subdomains>cyberjapandata-t1, cyberjapandata-t2, cyberjapandata-t3</url_templet_subdomains>
+	    <min_level>2</min_level>
+	    <max_level>16</max_level>
+	    <projectType>EPSG_3857</projectType>
+	    <mapbounds>
+	      <left>-2.0037508342789244E7</left>
+	      <top>2.0037508342789244E7</top>
+	      <right>2.0037508342789244E7</right>
+	      <bottom>-2.0037508342789244E7</bottom>
+	    </mapbounds>
+	  </LayerDefine>
+	  <LayerDefine id="3">
+	    <caption>白地図</caption>
+	    <name>白地図</name>
+	    <description>国土地理院　白地図</description>
+	    <legend></legend>
+	    <url_templet>http://{s}.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png</url_templet>
+	    <url_templet_subdomains>cyberjapandata-t1, cyberjapandata-t2,cyberjapandata-t3</url_templet_subdomains>
+	    <min_level>2</min_level>
+	    <max_level>16</max_level>
+	    <projectType>EPSG_3857</projectType>
+	    <mapbounds>
+	      <left>-2.0037508342789244E7</left>
+	      <top>2.0037508342789244E7</top>
+	      <right>2.0037508342789244E7</right>
+	      <bottom>-2.0037508342789244E7</bottom>
+	    </mapbounds>
+	  </LayerDefine>
+	  <LayerDefine id="4">
+	    <caption>English</caption>
+	    <name>English</name>
+	    <description>INTERNATIONAL MAP、Japan And Its Surroundings</description>
+	    <legend></legend>
+	    <url_templet>http://{s}.gsi.go.jp/xyz/english/{z}/{x}/{y}.png</url_templet>
+	    <url_templet_subdomains>cyberjapandata-t1, cyberjapandata-t2,cyberjapandata-t3</url_templet_subdomains>
+	    <min_level>2</min_level>
+	    <max_level>16</max_level>
+	    <projectType>EPSG_3857</projectType>
+	    <mapbounds>
+	      <left>-2.0037508342789244E7</left>
+	      <top>2.0037508342789244E7</top>
+	      <right>2.0037508342789244E7</right>
+	      <bottom>-2.0037508342789244E7</bottom>
+	    </mapbounds>
+	  </LayerDefine>
+	  <LayerDefine id="5">
+	    <caption>写真</caption>
+	    <name>写真</name>
+	    <description>国土地理院　シームレス空中写真</description>
+	    <legend></legend>
+	    <url_templet>http://{s}.gsi.go.jp/xyz/ort/{z}/{x}/{y}.png</url_templet>
+	    <url_templet_subdomains>cyberjapandata-t1,cyberjapandata-t2,cyberjapandata-t3</url_templet_subdomains>
+	    <min_level>2</min_level>
+	    <max_level>16</max_level>
+	    <projectType>EPSG_3857</projectType>
+	    <mapbounds>
+	      <left>-2.0037508342789244E7</left>
+	      <top>2.0037508342789244E7</top>
+	      <right>2.0037508342789244E7</right>
+	      <bottom>-2.0037508342789244E7</bottom>
+	    </mapbounds>
+	  </LayerDefine>
+	  <LayerDefine id="6">
+	    <caption>色別標高図</caption>
+	    <name>色別標高図</name>
+	    <description>国土地理院　色別標高図</description>
+	    <legend>http://maps.gsi.go.jp/development/ichiran.html#relief</legend>
+	    <url_templet>http://{s}.gsi.go.jp/xyz/ort/{z}/{x}/{y}.png</url_templet>
+	    <url_templet_subdomains>cyberjapandata-t1,cyberjapandata-t2,cyberjapandata-t3</url_templet_subdomains>
+	    <min_level>2</min_level>
+	    <max_level>16</max_level>
+	    <projectType>EPSG_3857</projectType>
+	    <mapbounds>
+	      <left>-2.0037508342789244E7</left>
+	      <top>2.0037508342789244E7</top>
+	      <right>2.0037508342789244E7</right>
+	      <bottom>-2.0037508342789244E7</bottom>
+	    </mapbounds>
+	  </LayerDefine>
+  </LayerCatalog>
+  
+  <LayerDefine id="6">
+    <caption>OpenStreetMap</caption>
+    <name>OpenStreetMap</name>
+    <description>OpenStreetMap</description>
+    <legend></legend>
+    <url_templet>http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png</url_templet>
+    <url_templet_subdomains>a,b,c</url_templet_subdomains>
+    <min_level>0</min_level>
+    <max_level>18</max_level>
+    <projectType>EPSG_3857</projectType>
+    <mapbounds>
+      <left>-2.0037508342789244E7</left>
+      <top>2.0037508342789244E7</top>
+      <right>2.0037508342789244E7</right>
+      <bottom>-2.0037508342789244E7</bottom>
+    </mapbounds>
+  </LayerDefine>
+  <LayerCatalog title="天地图">
+  	  <LayerDefine id="7">
+	    <caption>标准地图</caption>
+	    <name>标准地图</name>
+	    <url_templet>http://{s}.tianditu.com/DataServer?T=vec_c&amp;x={x}&amp;y={y}&amp;l={z}</url_templet>
+	    <url_templet_subdomains>t1,t2,t3</url_templet_subdomains>
+	    <min_level>1</min_level>
+	    <max_level>18</max_level>
+	    <projectType>EPSG_4326</projectType>
+	    <mapbounds>
+	      <left>-180.0</left>
+	      <top>90.0</top>
+	      <right>180.0</right>
+	      <bottom>-90.0</bottom>
+	    </mapbounds>
+	  </LayerDefine>
+  </LayerCatalog>
+</LayerDefines>
