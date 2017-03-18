@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LayerDefines>
   <LayerCatalog title="国土地理院">
-  	<LayerDefine id="1">ss
+  	<LayerDefine id="1">
 	    <caption>標準地図</caption>
 	    <name>標準地図</name>
 	    <description>国土地理院　標準地図</description>
