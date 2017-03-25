@@ -3,43 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>追随自己，一路向南 | Mapper|Geographic Software Developer</title>
+  <title>leaflet中将地图导出pdf文件 | Mapper|Geographic Software Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12月8日8:25在首都机场浓重的雾霾中乘坐川航航班出发，计划中经停万州，但由于万州大雾航班改停重庆江北机场，经过加油后飞往昆明，最终晚点一小时于14：:20落地长水机场。 
-清晨七点半的首都机场 
-中午11点的重庆江北机场 
-下午14点20分的昆明长水机场 
-入住宾馆后吃一碗热辣的米线 
-昆明市区闲逛">
+  <meta name="description" content="在leaflet和openlayers中并没有提供地图导出图片或pdf的方法，如果需要导出地图的内容，一般都是使用 HTMLCanvasElement.toBlob() 的方法，把地图内容导出成为一个图片类型的Blob对象了(替换了原先非标准的mozGetAsFile方法).toBlob方法是异步的: 
+void canvas.toBlob(callback, mimeType, qualityA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="追随自己，一路向南">
-<meta property="og:url" content="http://AutuMap.com/2016/12/13/20161213/index.html">
+<meta property="og:title" content="leaflet中将地图导出pdf文件">
+<meta property="og:url" content="http://AutuMap.com/2016/12/13/20161205_2/index.html">
 <meta property="og:site_name" content="Mapper|Geographic Software Developer">
-<meta property="og:description" content="12月8日8:25在首都机场浓重的雾霾中乘坐川航航班出发，计划中经停万州，但由于万州大雾航班改停重庆江北机场，经过加油后飞往昆明，最终晚点一小时于14：:20落地长水机场。 
-清晨七点半的首都机场 
-中午11点的重庆江北机场 
-下午14点20分的昆明长水机场 
-入住宾馆后吃一碗热辣的米线 
-昆明市区闲逛">
-<meta property="og:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_073740.jpg-Compress">
-<meta property="og:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_073815.jpg-Compress">
-<meta property="og:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_110233.jpg-Compress">
-<meta property="og:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_142901.jpg-Compress">
-<meta property="og:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_143543.jpg-Compress">
-<meta property="og:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_180856.jpg-Compress">
-<meta property="og:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161209_105231.jpg-Compress">
-<meta property="og:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161210_155337.jpg-Compress">
-<meta property="og:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161210_134834.jpg-Compress">
-<meta property="og:updated_time" content="2017-03-25T03:14:48.772Z">
+<meta property="og:description" content="在leaflet和openlayers中并没有提供地图导出图片或pdf的方法，如果需要导出地图的内容，一般都是使用 HTMLCanvasElement.toBlob() 的方法，把地图内容导出成为一个图片类型的Blob对象了(替换了原先非标准的mozGetAsFile方法).toBlob方法是异步的: 
+void canvas.toBlob(callback, mimeType, qualityA">
+<meta property="og:updated_time" content="2017-03-25T02:21:08.001Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="追随自己，一路向南">
-<meta name="twitter:description" content="12月8日8:25在首都机场浓重的雾霾中乘坐川航航班出发，计划中经停万州，但由于万州大雾航班改停重庆江北机场，经过加油后飞往昆明，最终晚点一小时于14：:20落地长水机场。 
-清晨七点半的首都机场 
-中午11点的重庆江北机场 
-下午14点20分的昆明长水机场 
-入住宾馆后吃一碗热辣的米线 
-昆明市区闲逛">
-<meta name="twitter:image" content="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_073740.jpg-Compress">
+<meta name="twitter:title" content="leaflet中将地图导出pdf文件">
+<meta name="twitter:description" content="在leaflet和openlayers中并没有提供地图导出图片或pdf的方法，如果需要导出地图的内容，一般都是使用 HTMLCanvasElement.toBlob() 的方法，把地图内容导出成为一个图片类型的Blob对象了(替换了原先非标准的mozGetAsFile方法).toBlob方法是异步的: 
+void canvas.toBlob(callback, mimeType, qualityA">
   
     <link rel="alternative" href="/atom.xml" title="Mapper|Geographic Software Developer" type="application/atom+xml">
   
@@ -249,11 +227,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-20161213" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-20161205_2" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/13/20161213/" class="article-date">
-      <time datetime="2016-12-13T13:04:49.068Z" itemprop="datePublished">2016-12-13</time>
+      <a href="/2016/12/13/20161205_2/" class="article-date">
+      <time datetime="2016-12-13T12:44:55.497Z" itemprop="datePublished">2016-12-13</time>
 </a>
     </div>
   
@@ -266,7 +244,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      追随自己，一路向南
+      leaflet中将地图导出pdf文件
     </h1>
   
 
@@ -277,7 +255,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GIS/">GIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leaflet/">Leaflet</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -287,13 +265,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>12月8日8:25在首都机场浓重的雾霾中乘坐川航航班出发，计划中经停万州，但由于万州大雾航班改停重庆江北机场，经过加油后飞往昆明，最终晚点一小时于14：:20落地长水机场。 </p>
-<h2 id="清晨七点半的首都机场"><a href="#清晨七点半的首都机场" class="headerlink" title="清晨七点半的首都机场"></a>清晨七点半的首都机场</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_073740.jpg-Compress" alt="首都机场"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_073815.jpg-Compress" alt="首都机场"> </p>
-<h2 id="中午11点的重庆江北机场"><a href="#中午11点的重庆江北机场" class="headerlink" title="中午11点的重庆江北机场"></a>中午11点的重庆江北机场</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_110233.jpg-Compress" alt="江北机场"> </p>
-<h2 id="下午14点20分的昆明长水机场"><a href="#下午14点20分的昆明长水机场" class="headerlink" title="下午14点20分的昆明长水机场"></a>下午14点20分的昆明长水机场</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_142901.jpg-Compress" alt="长水机场"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_143543.jpg-Compress" alt="长水机场"> </p>
-<h2 id="入住宾馆后吃一碗热辣的米线"><a href="#入住宾馆后吃一碗热辣的米线" class="headerlink" title="入住宾馆后吃一碗热辣的米线"></a>入住宾馆后吃一碗热辣的米线</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_180856.jpg-Compress" alt="米线"> </p>
-<h2 id="昆明市区闲逛"><a href="#昆明市区闲逛" class="headerlink" title="昆明市区闲逛"></a>昆明市区闲逛</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161209_105231.jpg-Compress" alt="闲逛"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161210_155337.jpg-Compress" alt="闲逛"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161210_134834.jpg-Compress" alt="闲逛"> </p>
-
+        <p>在leaflet和openlayers中并没有提供地图导出图片或pdf的方法，如果需要导出地图的内容，一般都是使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob" target="_blank" rel="external">HTMLCanvasElement.toBlob()</a> 的方法，把地图内容导出成为一个图片类型的Blob对象了(替换了原先非标准的mozGetAsFile方法).toBlob方法是异步的: </p>
+<h3 id="void-canvas-toBlob-callback-mimeType-qualityArgument"><a href="#void-canvas-toBlob-callback-mimeType-qualityArgument" class="headerlink" title="void canvas.toBlob(callback, mimeType, qualityArgument);"></a>void canvas.toBlob(callback, mimeType, qualityArgument);</h3><p>默认的图片输出格式是PNG格式，同样可以指定保存为其他格式，还可以指定图像保存的压缩质量：</p>
+<h3 id="canvas-toBlob-function-blob-…-“image-jpeg”-0-95-用95-质量的JPEG格式保存"><a href="#canvas-toBlob-function-blob-…-“image-jpeg”-0-95-用95-质量的JPEG格式保存" class="headerlink" title="canvas.toBlob(function(blob){…}, “image/jpeg”, 0.95); // 用95%质量的JPEG格式保存"></a>canvas.toBlob(function(blob){…}, “image/jpeg”, 0.95); // 用95%质量的JPEG格式保存</h3><h2 id="导出图片方法"><a href="#导出图片方法" class="headerlink" title="导出图片方法"></a>导出图片方法</h2><h3 id="把画布图形保存为png格式文件并添加到页面"><a href="#把画布图形保存为png格式文件并添加到页面" class="headerlink" title="把画布图形保存为png格式文件并添加到页面"></a>把画布图形保存为png格式文件并添加到页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var canvas = document.getElementById(<span class="string">"canvas"</span>);</div><div class="line">canvas.toBlob(<span class="keyword">function</span>(blob) &#123;</div><div class="line">  var newImg = document.createElement(<span class="string">"img"</span>),url = URL.createObjectURL(blob);</div><div class="line"></div><div class="line">  newImg.onload = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">    // no longer need to <span class="built_in">read</span> the blob so it<span class="string">'s revoked</span></div><div class="line">    URL.revokeObjectURL(url);</div><div class="line">  &#125;;</div><div class="line"></div><div class="line">  newImg.src = url;</div><div class="line">  document.body.appendChild(newImg);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="利用FileSaver可以把画布图形保存为png格式文件并下载"><a href="#利用FileSaver可以把画布图形保存为png格式文件并下载" class="headerlink" title="利用FileSaver可以把画布图形保存为png格式文件并下载"></a>利用FileSaver可以把画布图形保存为png格式文件并下载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var canvas = document.getElementById(<span class="string">"canvas"</span>);</div><div class="line">canvas.toBlob(<span class="keyword">function</span>(blob) &#123;</div><div class="line">    saveAs(blob, <span class="string">'map.png'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="把画布图形保存为icon格式文件并添加下载链接（只支持Mozilla）"><a href="#把画布图形保存为icon格式文件并添加下载链接（只支持Mozilla）" class="headerlink" title="把画布图形保存为icon格式文件并添加下载链接（只支持Mozilla）"></a>把画布图形保存为icon格式文件并添加下载链接（只支持Mozilla）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var canvas = document.getElementById(<span class="string">"canvas"</span>);</div><div class="line">var d = canvas.width;</div><div class="line">ctx = canvas.getContext(<span class="string">"2d"</span>);</div><div class="line">ctx.beginPath();</div><div class="line">ctx.moveTo(d / 2, 0);</div><div class="line">ctx.lineTo(d, d);</div><div class="line">ctx.lineTo(0, d);</div><div class="line">ctx.closePath();</div><div class="line">ctx.fillStyle = <span class="string">"yellow"</span>;</div><div class="line">ctx.fill();</div><div class="line"></div><div class="line"><span class="keyword">function</span> blobCallback(iconName) &#123;</div><div class="line">  <span class="built_in">return</span> <span class="keyword">function</span>(b) &#123;</div><div class="line">    var a = document.createElement(<span class="string">"a"</span>);</div><div class="line">    a.textContent = <span class="string">"Download"</span>;</div><div class="line">    document.body.appendChild(a);</div><div class="line">    a.style.display = <span class="string">"block"</span>;</div><div class="line">    a.download = iconName + <span class="string">".ico"</span>;</div><div class="line">    a.href = window.URL.createObjectURL(b);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">canvas.toBlob(blobCallback(<span class="string">'passThisString'</span>), <span class="string">'image/vnd.microsoft.icon'</span>,<span class="string">'-moz-parse-options:format=bmp;bpp=32'</span>);</div></pre></td></tr></table></figure>
+<h2 id="转换为pdf方法"><a href="#转换为pdf方法" class="headerlink" title="转换为pdf方法"></a>转换为pdf方法</h2><h3 id="利用jsPDF输出pdf文件"><a href="#利用jsPDF输出pdf文件" class="headerlink" title="利用jsPDF输出pdf文件"></a>利用jsPDF输出pdf文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">objImageData = canvas.toDataURL(<span class="string">"image/jpeg"</span>);</div><div class="line">fileName = fileName + <span class="string">".pdf"</span>;</div><div class="line">var doc = new jsPDF();</div><div class="line"></div><div class="line">var pagewidth = canvas.width / 3;</div><div class="line">var pageheight = canvas.height / 3;</div><div class="line">doc.addPage(pagewidth + 20, pageheight + 20);</div><div class="line">doc.deletePage(1);</div><div class="line">doc.addImage(objImageData, <span class="string">'JPEG'</span>, 10, 10, pagewidth, pageheight);</div><div class="line">doc.save(fileName);</div></pre></td></tr></table></figure>
+<h2 id="跨域的处理"><a href="#跨域的处理" class="headerlink" title="跨域的处理"></a>跨域的处理</h2><h3 id="HTMLCanvasElement-toBlob-、HTMLCanvasElement-toDataURL-等方法在地图有跨域图片的情况下无法使用，浏览器会以不安全的访问来拒绝生成跨域图片的二进制对象或URL。"><a href="#HTMLCanvasElement-toBlob-、HTMLCanvasElement-toDataURL-等方法在地图有跨域图片的情况下无法使用，浏览器会以不安全的访问来拒绝生成跨域图片的二进制对象或URL。" class="headerlink" title="HTMLCanvasElement.toBlob()、HTMLCanvasElement.toDataURL()等方法在地图有跨域图片的情况下无法使用，浏览器会以不安全的访问来拒绝生成跨域图片的二进制对象或URL。"></a>HTMLCanvasElement.toBlob()、HTMLCanvasElement.toDataURL()等方法在地图有跨域图片的情况下无法使用，浏览器会以不安全的访问来拒绝生成跨域图片的二进制对象或URL。</h3>
       
     </div>
     
@@ -301,13 +279,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/12/13/20161213/">追随自己，一路向南</a></p>
+        <p><span>本文标题:</span><a href="/2016/12/13/20161205_2/">leaflet中将地图导出pdf文件</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 AutuMap 的个人博客">AutuMap</a></p>
-        <p><span>发布时间:</span>2016年12月13日 - 21时04分</p>
-        <p><span>最后更新:</span>2017年03月25日 - 11时14分</p>
+        <p><span>发布时间:</span>2016年12月13日 - 20时44分</p>
+        <p><span>最后更新:</span>2017年03月25日 - 10时21分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/12/13/20161213/" title="追随自己，一路向南">http://AutuMap.com/2016/12/13/20161213/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://AutuMap.com/2016/12/13/20161213/　　作者: AutuMap" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/12/13/20161205_2/" title="leaflet中将地图导出pdf文件">http://AutuMap.com/2016/12/13/20161205_2/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://AutuMap.com/2016/12/13/20161205_2/　　作者: AutuMap" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -320,18 +298,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/03/25/20170325/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/12/13/20161213/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Android中ListView分割线的设置
+          追随自己，一路向南
         
       </div>
     </a>
   
   
-    <a href="/2016/12/13/20161205_2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">leaflet中将地图导出pdf文件</div>
+    <a href="/2016/12/13/20161205_1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">感谢Github提供空间，利用Hexo搭建了此站点</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -342,7 +320,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#清晨七点半的首都机场"><span class="toc-number">1.</span> <span class="toc-text">清晨七点半的首都机场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#中午11点的重庆江北机场"><span class="toc-number">2.</span> <span class="toc-text">中午11点的重庆江北机场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下午14点20分的昆明长水机场"><span class="toc-number">3.</span> <span class="toc-text">下午14点20分的昆明长水机场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#入住宾馆后吃一碗热辣的米线"><span class="toc-number">4.</span> <span class="toc-text">入住宾馆后吃一碗热辣的米线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#昆明市区闲逛"><span class="toc-number">5.</span> <span class="toc-text">昆明市区闲逛</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#void-canvas-toBlob-callback-mimeType-qualityArgument"><span class="toc-number">1.</span> <span class="toc-text">void canvas.toBlob(callback, mimeType, qualityArgument);</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#canvas-toBlob-function-blob-…-“image-jpeg”-0-95-用95-质量的JPEG格式保存"><span class="toc-number">2.</span> <span class="toc-text">canvas.toBlob(function(blob){…}, “image/jpeg”, 0.95); // 用95%质量的JPEG格式保存</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导出图片方法"><span class="toc-number"></span> <span class="toc-text">导出图片方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#把画布图形保存为png格式文件并添加到页面"><span class="toc-number">1.</span> <span class="toc-text">把画布图形保存为png格式文件并添加到页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用FileSaver可以把画布图形保存为png格式文件并下载"><span class="toc-number">2.</span> <span class="toc-text">利用FileSaver可以把画布图形保存为png格式文件并下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#把画布图形保存为icon格式文件并添加下载链接（只支持Mozilla）"><span class="toc-number">3.</span> <span class="toc-text">把画布图形保存为icon格式文件并添加下载链接（只支持Mozilla）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#转换为pdf方法"><span class="toc-number"></span> <span class="toc-text">转换为pdf方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用jsPDF输出pdf文件"><span class="toc-number">1.</span> <span class="toc-text">利用jsPDF输出pdf文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跨域的处理"><span class="toc-number"></span> <span class="toc-text">跨域的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTMLCanvasElement-toBlob-、HTMLCanvasElement-toDataURL-等方法在地图有跨域图片的情况下无法使用，浏览器会以不安全的访问来拒绝生成跨域图片的二进制对象或URL。"><span class="toc-number">1.</span> <span class="toc-text">HTMLCanvasElement.toBlob()、HTMLCanvasElement.toDataURL()等方法在地图有跨域图片的情况下无法使用，浏览器会以不安全的访问来拒绝生成跨域图片的二进制对象或URL。</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -390,7 +368,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/12/13/20161213/" data-title="追随自己，一路向南" data-url="http://AutuMap.com/2016/12/13/20161213/"></div>
+    <div class="ds-thread" data-thread-key="2016/12/13/20161205_2/" data-title="leaflet中将地图导出pdf文件" data-url="http://AutuMap.com/2016/12/13/20161205_2/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -413,13 +391,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/03/25/20170325/" title="上一篇: Android中ListView分割线的设置">
+            <a href="/2016/12/13/20161213/" title="上一篇: 追随自己，一路向南">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/12/13/20161205_2/" title="下一篇: leaflet中将地图导出pdf文件">
+            <a href="/2016/12/13/20161205_1/" title="下一篇: 感谢Github提供空间，利用Hexo搭建了此站点">
                 <i class="fa fa-angle-right"></i>
             </a>
         

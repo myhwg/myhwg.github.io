@@ -144,7 +144,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <a href="/tags/Andorid/" style="font-size: 10px;">Andorid</a> <a href="/tags/GIS/" style="font-size: 10px;">GIS</a> <a href="/tags/Leaflet/" style="font-size: 10px;">Leaflet</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
                     </div>
                 </section>
                 
@@ -228,6 +228,73 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-20170325" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/25/20170325/" class="article-date">
+      <time datetime="2017-03-25T02:13:37.000Z" itemprop="datePublished">2017-03-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/25/20170325/">Android中ListView分割线的设置</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="常用xml配置方式"><a href="#常用xml配置方式" class="headerlink" title="常用xml配置方式"></a>常用xml配置方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;ListView</div><div class="line">    android:id=<span class="string">"@+id/list_define_layers"</span></div><div class="line">    android:layout_width=<span class="string">"match_parent"</span></div><div class="line">    android:layout_height=<span class="string">"wrap_content"</span></div><div class="line">    android:cacheColorHint=<span class="string">"@android:color/transparent"</span>/&gt;</div></pre></td></tr></table></figure>
+<h3 id="呈现的效果如下"><a href="#呈现的效果如下" class="headerlink" title="呈现的效果如下"></a>呈现的效果如下</h3><p><img src="http://oi5t31h0d.bkt.clouddn.com/2017-03-25-10-28-01.png-Compress" alt="默认分割线"> </p>
+<h2 id="调整布局高度模式"><a href="#调整布局高度模式" class="headerlink" title="调整布局高度模式"></a>调整布局高度模式</h2><h3 id="将layout-height由”wrap-content”设置为”match-parent”后底部的分割线也被显示出来"><a href="#将layout-height由”wrap-content”设置为”match-parent”后底部的分割线也被显示出来" class="headerlink" title="将layout_height由”wrap_content”设置为”match_parent”后底部的分割线也被显示出来"></a>将layout_height由”wrap_content”设置为”match_parent”后底部的分割线也被显示出来</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;ListView</div><div class="line">    android:id=<span class="string">"@+id/list_define_layers"</span></div><div class="line">    android:layout_width=<span class="string">"match_parent"</span></div><div class="line">    android:layout_height=<span class="string">"match_parent"</span></div><div class="line">    android:cacheColorHint=<span class="string">"@android:color/transparent"</span>/&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://oi5t31h0d.bkt.clouddn.com/2017-03-25-10-32-15.png-Compress" alt="底部分割线显示"> </p>
+<h2 id="调整分割线颜色"><a href="#调整分割线颜色" class="headerlink" title="调整分割线颜色"></a>调整分割线颜色</h2><h3 id="分割线颜色由divider属性设置，但dividerHeight属性一定不能为0，必须大于0"><a href="#分割线颜色由divider属性设置，但dividerHeight属性一定不能为0，必须大于0" class="headerlink" title="分割线颜色由divider属性设置，但dividerHeight属性一定不能为0，必须大于0"></a>分割线颜色由divider属性设置，但dividerHeight属性一定不能为0，必须大于0</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;ListView</div><div class="line">    android:id=<span class="string">"@+id/list_define_layers"</span></div><div class="line">    android:layout_width=<span class="string">"match_parent"</span></div><div class="line">    android:layout_height=<span class="string">"match_parent"</span></div><div class="line">    android:divider=<span class="string">"#B0B0B0"</span></div><div class="line">    android:dividerHeight=<span class="string">"1dp"</span></div><div class="line">    android:cacheColorHint=<span class="string">"@android:color/transparent"</span>/&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://oi5t31h0d.bkt.clouddn.com/2017-03-25-11-13-12.png-Compress" alt="底部分割线显示"> </p>
+<h2 id="调整分割线样式"><a href="#调整分割线样式" class="headerlink" title="调整分割线样式"></a>调整分割线样式</h2><h3 id="分割线样式利用drawable来定义一个xml文档，由divider属性设置，但dividerHeight属性必须大约drawable设置的高度，另外layerType必须设置为”software”"><a href="#分割线样式利用drawable来定义一个xml文档，由divider属性设置，但dividerHeight属性必须大约drawable设置的高度，另外layerType必须设置为”software”" class="headerlink" title="分割线样式利用drawable来定义一个xml文档，由divider属性设置，但dividerHeight属性必须大约drawable设置的高度，另外layerType必须设置为”software”"></a>分割线样式利用drawable来定义一个xml文档，由divider属性设置，但dividerHeight属性必须大约drawable设置的高度，另外layerType必须设置为”software”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span>?&gt;</div><div class="line">&lt;layer-list xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</div><div class="line">    &lt;item&gt;</div><div class="line">        &lt;shape android:shape=<span class="string">"line"</span> &gt;</div><div class="line">            &lt;stroke</div><div class="line">                android:dashWidth=<span class="string">"5dp"</span></div><div class="line">                android:dashGap=<span class="string">"3dp"</span></div><div class="line">                android:width=<span class="string">"1dp"</span></div><div class="line">                android:color=<span class="string">"#008B00"</span> /&gt;</div><div class="line">            &lt;size android:height=<span class="string">"1dp"</span> /&gt;</div><div class="line">        &lt;/shape&gt;</div><div class="line">    &lt;/item&gt;</div><div class="line">&lt;/layer-list&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;ListView</div><div class="line">    android:id=<span class="string">"@+id/list_define_layers"</span></div><div class="line">    android:layout_width=<span class="string">"match_parent"</span></div><div class="line">    android:layout_height=<span class="string">"match_parent"</span></div><div class="line">    android:divider=<span class="string">"@drawable/dividerline"</span></div><div class="line">    android:dividerHeight=<span class="string">"2dp"</span></div><div class="line">    android:layerType=<span class="string">"software"</span></div><div class="line">    android:cacheColorHint=<span class="string">"@android:color/transparent"</span>/&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://oi5t31h0d.bkt.clouddn.com/2017-03-25-11-28-09.png-Compress" alt="底部分割线显示"> </p>
+<p>上述配置代码中的android:cacheColorHint=”@android:color/transparent”则是为了防止列表过长时拖动发生黑色背景做的设置。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Andorid/">Andorid</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-20161213" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -256,11 +323,11 @@
       
           
         <p>12月8日8:25在首都机场浓重的雾霾中乘坐川航航班出发，计划中经停万州，但由于万州大雾航班改停重庆江北机场，经过加油后飞往昆明，最终晚点一小时于14：:20落地长水机场。 </p>
-<h2 id="清晨七点半的首都机场"><a href="#清晨七点半的首都机场" class="headerlink" title="清晨七点半的首都机场"></a>清晨七点半的首都机场</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_073740.jpg" alt="首都机场"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_073815.jpg" alt="首都机场"> </p>
-<h2 id="中午11点的重庆江北机场"><a href="#中午11点的重庆江北机场" class="headerlink" title="中午11点的重庆江北机场"></a>中午11点的重庆江北机场</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_110233.jpg" alt="江北机场"> </p>
-<h2 id="下午14点20分的昆明长水机场"><a href="#下午14点20分的昆明长水机场" class="headerlink" title="下午14点20分的昆明长水机场"></a>下午14点20分的昆明长水机场</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_142901.jpg" alt="长水机场"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_143543.jpg" alt="长水机场"> </p>
-<h2 id="入住宾馆后吃一碗热辣的米线"><a href="#入住宾馆后吃一碗热辣的米线" class="headerlink" title="入住宾馆后吃一碗热辣的米线"></a>入住宾馆后吃一碗热辣的米线</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_180900.jpg" alt="米线"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_180856.jpg" alt="米线"> </p>
-<h2 id="昆明市区闲逛"><a href="#昆明市区闲逛" class="headerlink" title="昆明市区闲逛"></a>昆明市区闲逛</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161209_105231.jpg" alt="闲逛"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161210_155337.jpg" alt="闲逛"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161210_134834.jpg" alt="闲逛"> </p>
+<h2 id="清晨七点半的首都机场"><a href="#清晨七点半的首都机场" class="headerlink" title="清晨七点半的首都机场"></a>清晨七点半的首都机场</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_073740.jpg-Compress" alt="首都机场"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_073815.jpg-Compress" alt="首都机场"> </p>
+<h2 id="中午11点的重庆江北机场"><a href="#中午11点的重庆江北机场" class="headerlink" title="中午11点的重庆江北机场"></a>中午11点的重庆江北机场</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_110233.jpg-Compress" alt="江北机场"> </p>
+<h2 id="下午14点20分的昆明长水机场"><a href="#下午14点20分的昆明长水机场" class="headerlink" title="下午14点20分的昆明长水机场"></a>下午14点20分的昆明长水机场</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_142901.jpg-Compress" alt="长水机场"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_143543.jpg-Compress" alt="长水机场"> </p>
+<h2 id="入住宾馆后吃一碗热辣的米线"><a href="#入住宾馆后吃一碗热辣的米线" class="headerlink" title="入住宾馆后吃一碗热辣的米线"></a>入住宾馆后吃一碗热辣的米线</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161208_180856.jpg-Compress" alt="米线"> </p>
+<h2 id="昆明市区闲逛"><a href="#昆明市区闲逛" class="headerlink" title="昆明市区闲逛"></a>昆明市区闲逛</h2><p><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161209_105231.jpg-Compress" alt="闲逛"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161210_155337.jpg-Compress" alt="闲逛"><br><img src="http://oi5t31h0d.bkt.clouddn.com/IMG_20161210_134834.jpg-Compress" alt="闲逛"> </p>
 
       
     </div>
@@ -270,6 +337,10 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -290,8 +361,8 @@
     <article id="post-20161205_2" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/05/20161205_2/" class="article-date">
-      <time datetime="2016-12-05T08:17:13.733Z" itemprop="datePublished">2016-12-05</time>
+      <a href="/2016/12/13/20161205_2/" class="article-date">
+      <time datetime="2016-12-13T12:44:55.497Z" itemprop="datePublished">2016-12-13</time>
 </a>
     </div>
   
@@ -304,7 +375,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/05/20161205_2/">leaflet中将地图导出pdf文件</a>
+      <a class="article-title" href="/2016/12/13/20161205_2/">leaflet中将地图导出pdf文件</a>
     </h1>
   
 
@@ -329,6 +400,10 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GIS/">GIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leaflet/">Leaflet</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -349,8 +424,8 @@
     <article id="post-20161205_1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/05/20161205_1/" class="article-date">
-      <time datetime="2016-12-05T02:22:46.743Z" itemprop="datePublished">2016-12-05</time>
+      <a href="/2016/12/13/20161205_1/" class="article-date">
+      <time datetime="2016-12-13T12:44:55.491Z" itemprop="datePublished">2016-12-13</time>
 </a>
     </div>
   
@@ -363,7 +438,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/05/20161205_1/">感谢Github提供空间，利用Hexo搭建了此站点</a>
+      <a class="article-title" href="/2016/12/13/20161205_1/">感谢Github提供空间，利用Hexo搭建了此站点</a>
     </h1>
   
 
@@ -383,6 +458,10 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -406,7 +485,7 @@
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2016 AutuMap
+                &copy; 2017 AutuMap
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
