@@ -6,7 +6,7 @@
 	    <name>道路地图</name>
 	    <description>Google　道路地图</description>
 	    <legend>http://www.google.cn/maps</legend>
-	    <url_templet>http://{s}.google.cn/vt/lyrs=m&hl=zh-CN&gl=cn&x={x}&y={y}&z={z}</url_templet>
+	    <url_templet>http://{s}.google.cn/vt/lyrs=m&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
 	    <url_templet_subdomains>mt0,mt1,mt2,mt3</url_templet_subdomains>
 	    <min_level>0</min_level>
 	    <max_level>18</max_level>
@@ -23,7 +23,7 @@
 	    <name>地形地图</name>
 	    <description>Google　地形地图</description>
 	    <legend>http://www.google.cn/maps</legend>
-	    <url_templet>http://{s}.google.cn/vt/lyrs=p&hl=zh-CN&gl=cn&x={x}&y={y}&z={z}</url_templet>
+	    <url_templet>http://{s}.google.cn/vt/lyrs=p&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
 	    <url_templet_subdomains>mt0,mt1,mt2,mt3</url_templet_subdomains>
 	    <min_level>0</min_level>
 	    <max_level>18</max_level>
@@ -40,7 +40,7 @@
 	    <name>影像地图</name>
 	    <description>Google　影像地图</description>
 	    <legend>http://www.google.cn/maps</legend>
-	    <url_templet>http://{s}.google.cn/vt/lyrs=y&hl=zh-CN&gl=cn&x={x}&y={y}&z={z}</url_templet>
+	    <url_templet>http://{s}.google.cn/vt/lyrs=y&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
 	    <url_templet_subdomains>mt0,mt1,mt2,mt3</url_templet_subdomains>
 	    <min_level>0</min_level>
 	    <max_level>18</max_level>
@@ -57,7 +57,7 @@
 	    <name>地形(无标注)</name>
 	    <description>Google　地形(无标注)</description>
 	    <legend>http://www.google.cn/maps</legend>
-	    <url_templet>http://{s}.google.cn/vt/lyrs=t&hl=zh-CN&gl=cn&x={x}&y={y}&z={z}</url_templet>
+	    <url_templet>http://{s}.google.cn/vt/lyrs=t&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
 	    <url_templet_subdomains>mt0,mt1,mt2,mt3</url_templet_subdomains>
 	    <min_level>0</min_level>
 	    <max_level>18</max_level>
@@ -74,7 +74,7 @@
 	    <name>影像(无标注)</name>
 	    <description>Google　影像(无标注)</description>
 	    <legend>http://www.google.cn/maps</legend>
-	    <url_templet>http://{s}.google.cn/vt/lyrs=s&hl=zh-CN&gl=cn&x={x}&y={y}&z={z}</url_templet>
+	    <url_templet>http://{s}.google.cn/vt/lyrs=s&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
 	    <url_templet_subdomains>mt0,mt1,mt2,mt3</url_templet_subdomains>
 	    <min_level>0</min_level>
 	    <max_level>18</max_level>
