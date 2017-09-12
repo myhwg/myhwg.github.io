@@ -3,7 +3,7 @@
   <LayerCatalog title="Google地图">
   	<LayerDefine id="1">
 	    <caption>道路地图</caption>
-	    <name>道路地图</name>
+	    <name>google_m</name>
 	    <description>Google　道路地图</description>
 	    <legend>http://www.google.cn/maps</legend>
 	    <url_templet>http://{s}.google.cn/vt/lyrs=m&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
@@ -20,7 +20,7 @@
 	  </LayerDefine>
 	  <LayerDefine id="2">
 	    <caption>地形地图</caption>
-	    <name>地形地图</name>
+	    <name>google_p</name>
 	    <description>Google　地形地图</description>
 	    <legend>http://www.google.cn/maps</legend>
 	    <url_templet>http://{s}.google.cn/vt/lyrs=p&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
@@ -37,7 +37,7 @@
 	  </LayerDefine>
 	  <LayerDefine id="3">
 	    <caption>影像地图</caption>
-	    <name>影像地图</name>
+	    <name>google_y</name>
 	    <description>Google　影像地图</description>
 	    <legend>http://www.google.cn/maps</legend>
 	    <url_templet>http://{s}.google.cn/vt/lyrs=y&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
@@ -54,7 +54,7 @@
 	  </LayerDefine>
 	  <LayerDefine id="4">
 	    <caption>地形(无标注)</caption>
-	    <name>地形(无标注)</name>
+	    <name>google_t</name>
 	    <description>Google　地形(无标注)</description>
 	    <legend>http://www.google.cn/maps</legend>
 	    <url_templet>http://{s}.google.cn/vt/lyrs=t&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
@@ -71,7 +71,7 @@
 	  </LayerDefine>
 	  <LayerDefine id="5">
       <caption>影像(无标注)</caption>
-	    <name>影像(无标注)</name>
+	    <name>google_s</name>
 	    <description>Google　影像(无标注)</description>
 	    <legend>http://www.google.cn/maps</legend>
 	    <url_templet>http://{s}.google.cn/vt/lyrs=s&amp;hl=zh-CN&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</url_templet>
@@ -88,29 +88,30 @@
 	  </LayerDefine>	  
   </LayerCatalog>
   
-  <LayerDefine id="6">
-    <caption>OpenStreetMap</caption>
-    <name>OpenStreetMap</name>
-    <description>OpenStreetMap</description>
-    <legend></legend>
-    <url_templet>http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png</url_templet>
-    <url_templet_subdomains>a,b,c</url_templet_subdomains>
-    <min_level>0</min_level>
-    <max_level>18</max_level>
-    <projectType>EPSG_3857</projectType>
-    <mapbounds>
-      <left>-2.0037508342789244E7</left>
-      <top>2.0037508342789244E7</top>
-      <right>2.0037508342789244E7</right>
-      <bottom>-2.0037508342789244E7</bottom>
-    </mapbounds>
-  </LayerDefine>
+
   <LayerCatalog title="天地图">
-  	  <LayerDefine id="7">
+      <LayerDefine id="6">
+      <caption>OpenStreetMap</caption>
+      <name>OpenStreetMap</name>
+      <description>OpenStreetMap</description>
+      <legend></legend>
+      <url_templet>http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png</url_templet>
+      <url_templet_subdomains>a,b,c</url_templet_subdomains>
+      <min_level>0</min_level>
+      <max_level>18</max_level>
+      <projectType>EPSG_3857</projectType>
+      <mapbounds>
+        <left>-2.0037508342789244E7</left>
+        <top>2.0037508342789244E7</top>
+        <right>2.0037508342789244E7</right>
+        <bottom>-2.0037508342789244E7</bottom>
+      </mapbounds>
+    </LayerDefine>
+  	 <LayerDefine id="7">
 	    <caption>标准地图</caption>
-	    <name>标准地图</name>
+	    <name>tianditu_vec</name>
 	    <url_templet>http://{s}.tianditu.com/DataServer?T=vec_c&amp;x={x}&amp;y={y}&amp;l={z}</url_templet>
-	    <url_templet_subdomains>t1,t2,t3</url_templet_subdomains>
+	    <url_templet_subdomains>t0,t1,t2,t3,t4,t5,t6,t7</url_templet_subdomains>
 	    <min_level>1</min_level>
 	    <max_level>18</max_level>
 	    <projectType>EPSG_4326</projectType>
@@ -121,5 +122,35 @@
 	      <bottom>-90.0</bottom>
 	    </mapbounds>
 	  </LayerDefine>
+    <LayerDefine id="8">
+	    <caption>影像地图</caption>
+	    <name>tianditu_img</name>
+	    <url_templet>http://{s}.tianditu.com/DataServer?T=img_c&amp;x={x}&amp;y={y}&amp;l={z}</url_templet>
+	    <url_templet_subdomains>t0,t1,t2,t3,t4,t5,t6,t7</url_templet_subdomains>
+	    <min_level>1</min_level>
+	    <max_level>18</max_level>
+	    <projectType>EPSG_4326</projectType>
+	    <mapbounds>
+	      <left>-180.0</left>
+	      <top>90.0</top>
+	      <right>180.0</right>
+	      <bottom>-90.0</bottom>
+	    </mapbounds>
+	  </LayerDefine>
+    <LayerDefine id="9">
+      <caption>地形地图</caption>
+      <name>tianditu_ter</name>
+      <url_templet>http://{s}.tianditu.com/DataServer?T=ter_c&amp;x={x}&amp;y={y}&amp;l={z}</url_templet>
+      <url_templet_subdomains>t0,t1,t2,t3,t4,t5,t6,t7</url_templet_subdomains>
+      <min_level>1</min_level>
+      <max_level>18</max_level>
+      <projectType>EPSG_4326</projectType>
+      <mapbounds>
+        <left>-180.0</left>
+        <top>90.0</top>
+        <right>180.0</right>
+        <bottom>-90.0</bottom>
+      </mapbounds>
+    </LayerDefine>
   </LayerCatalog>
 </LayerDefines>
